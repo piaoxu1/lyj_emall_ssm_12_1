@@ -21,10 +21,10 @@ public class UserService {
       return usersDao.insert(user);
   }
     /**
-     * 通过用户吗名获取
+     * 通过用户名获取
      */
     public Users getByUsername(String username){
-        return usersDao.selectByUsername(username);
+        return usersDao.selectByusername(username);
     }
     /**
      * 通过用户名和密码获取
@@ -32,5 +32,27 @@ public class UserService {
     public Users getByUsernameAndPassword(String username,String password){
         return usersDao.selectByUsernameAndPassword(username, SafeUtil.encode(password));
     }
-
+    /**
+     * 通过id获取
+     */
+    public Users get(int id){
+        return usersDao.select(id);
+    }
+    /**
+     * 更新
+     */
+    public boolean updatePassword(int id,String password){
+        return usersDao.updatePassword(id,SafeUtil.encode(password));
+    }
+    /**
+     * user
+     */
+    public boolean update(int id,String name,String phone,String address){
+        Users user=new Users();
+        user.setId(id);
+        user.setName(name);
+        user.setPhone(phone);
+        user.setAddress(address);
+        return usersDao.update(user);
+    }
 }

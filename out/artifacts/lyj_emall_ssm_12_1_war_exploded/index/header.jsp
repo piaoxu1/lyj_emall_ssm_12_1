@@ -50,10 +50,10 @@
 					<a>个人中心</a>
 					<i class="iconfont icon-zheng-triangle1"></i>
 					<ul class="uls">
-						<li><a href="order">我的订单</a></li>
-						<li><a href="address">收货地址</a></li>
-						<li><a href="password">修改密码</a></li>
-						<li><a href="logout">退出</a></li>
+						<li><a href="order.jsp">我的订单</a></li>
+						<li><a href="address.jsp">收货地址</a></li>
+						<li><a href="password.jsp">修改密码</a></li>
+						<li><a href="logout.jsp">退出</a></li>
 					</ul>
 				</div>
 			</c:if>	

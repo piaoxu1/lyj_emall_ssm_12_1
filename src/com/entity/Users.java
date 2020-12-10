@@ -6,18 +6,18 @@ import com.utils.SystemStringUtils;
  * 用户实体类
  */
 public class Users {
-    private Long id;
+    private int id;
     private String username;
     private String password;
     private String name;
-    private Long phone;
+    private String phone;
     private String address;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -45,11 +45,11 @@ public class Users {
         this.name = SystemStringUtils.strNotNullTrim(name);
     }
 
-    public Long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
